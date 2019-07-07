@@ -1,5 +1,7 @@
 ﻿namespace Shop.Web
 {
+    using Data;
+    using Data.Entities;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -8,8 +10,8 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
-    using Data;
-    using Data.Entities;
+    using Helpers;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -42,6 +44,8 @@
             services.AddTransient<SeedDb>();
 
             services.AddScoped<IRepository, Repository>();
+
+            services.AddScoped<IUserHelper, UserHelper>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {
