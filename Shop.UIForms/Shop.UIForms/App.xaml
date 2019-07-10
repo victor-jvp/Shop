@@ -4,9 +4,6 @@
              xmlns:infra="clr-namespace:Shop.UIForms.Infrastructure"
              x:Class="Shop.UIForms.App">
     <Application.Resources>
-        <ResourceDictionary>
-            <!--Locator-->
-            <infra:InstanceLocator x:Key="Locator"/>
-        </ResourceDictionary>
+
     </Application.Resources>
 </Application>
